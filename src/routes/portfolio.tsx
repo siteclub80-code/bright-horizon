@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SiteShell } from '@/components/siteclub/shell';
 import { PortfolioGrid } from '@/components/siteclub/portfolio-grid';
