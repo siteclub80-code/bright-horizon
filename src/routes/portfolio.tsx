@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { SiteShell } from '@/components/siteclub/shell';
 import { PortfolioGrid } from '@/components/siteclub/portfolio-grid';
 import { Reveal } from '@/components/siteclub/reveal';
-import { portfolioWhatsAppNumber, portfolioWhatsAppUrl } from '@/lib/siteclub';
 
 export const Route = createFileRoute('/portfolio')({
   head: () => ({ meta: [
@@ -19,5 +18,5 @@ export const Route = createFileRoute('/portfolio')({
 });
 
 function Portfolio() {
-  return <SiteShell><Reveal><main className="site-width section-space"><div className="page-heading"><span className="eyebrow">PORTFÓLIO</span><h1>Projetos que já<br/>estão no ar.</h1><p>Sites e sistemas criados para empresas e profissionais.</p><Button asChild className="button-3d"><a href={portfolioWhatsAppUrl} target="_blank" rel="noreferrer" aria-label={`Falar no WhatsApp ${portfolioWhatsAppNumber}`}><MessageCircle/>Falar no WhatsApp {portfolioWhatsAppNumber}</a></Button></div><PortfolioGrid/></main></Reveal></SiteShell>;
+  return <SiteShell><Reveal><main className="site-width section-space"><div className="page-heading"><span className="eyebrow">PORTFÓLIO</span><h1>Projetos que já<br/>estão no ar.</h1><p>Sites e sistemas criados para empresas e profissionais.</p></div><PortfolioGrid/></main></Reveal></SiteShell>;
 }
