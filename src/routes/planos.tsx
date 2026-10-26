@@ -1,0 +1,6 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { SiteShell } from '@/components/siteclub/shell';
+import { PlanGrid, DeliveryPromise } from '@/components/siteclub/plans';
+import { Reveal } from '@/components/siteclub/reveal';
+export const Route = createFileRoute('/planos')({ head: () => ({ meta: [{title:'Planos Siteclub — Sua presença digital por assinatura'},{name:'description',content:'Escolha uma landing page por R$39,99/mês, site institucional por R$59,99/mês ou sistema a partir de R$89,99/mês.'},{property:'og:title',content:'Planos Siteclub'},{property:'og:description',content:'A assinatura certa para o próximo passo da sua empresa.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}] }), component: Plans });
+function Plans() { return <SiteShell><Reveal><main className="site-width section-space"><div className="page-heading"><span className="eyebrow">INVISTA NO SEU PRÓXIMO PASSO</span><h1>Uma assinatura.<br/>Novas possibilidades.</h1><p>Escolha a solução que acompanha o momento da sua empresa.</p><DeliveryPromise/></div><PlanGrid/><p className="pricing-footnote">Os valores apresentados são mensais. Sistemas têm orçamento conforme as funcionalidades e a complexidade desejadas.</p></main></Reveal></SiteShell>; }
