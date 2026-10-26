@@ -482,7 +482,7 @@ body {
 /* Hero headline: keep each sentence line balanced on small screens */
 @media(max-width:700px){.hero-headline{font-size:29px;}}
 .hero-headline-br-sm{display:none;}
-@media(max-width:470px){.hero-headline-br-sm{display:inline;}}
+@media(max-width:1000px){.hero-headline-br-sm{display:inline;}}
 /* Keep the intro paragraph lines balanced on small screens */
 @media(max-width:700px){.hero-copy>p{max-width:400px;}}
 @media(max-width:470px){.hero-copy>p{font-size:11px;}}
