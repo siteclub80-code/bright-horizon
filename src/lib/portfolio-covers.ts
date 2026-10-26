@@ -1,7 +1,12 @@
-import corretora from '@/assets/portfolio-corretora.jpg';
-import drmarcia from '@/assets/portfolio-drmarcia.jpg';
-import novalog from '@/assets/portfolio-novalog.jpg';
-import estetica from '@/assets/portfolio-lf-clinica-estetica.jpg';
+import imoveis from '@/assets/portfolio-imoveis.jpg';
+import psicologia from '@/assets/portfolio-psicologia.jpg';
+import logistica from '@/assets/portfolio-logistica.jpg';
+import estetica from '@/assets/portfolio-estetica.jpg';
 
 /** Anonymized cover screenshots: client names and logos are blurred. */
-export const portfolioCovers: Record<string, string> = { corretora, drmarcia, novalog, 'lf-clinica-estetica': estetica };
+export const portfolioCovers: Record<string, string> = {
+  'corretora-imoveis': imoveis,
+  'consultorio-psicologia': psicologia,
+  'sistema-logistica': logistica,
+  'clinica-estetica': estetica,
+};
