@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Brand } from '@/components/siteclub/shell';
 import { portfolioProjects } from '@/lib/portfolio';
@@ -36,10 +36,6 @@ function ProjectViewer() {
           <Brand />
         </div>
         <span className="hidden text-sm text-muted-foreground md:inline">{project.name}</span>
-        <div className="flex items-center gap-2">
-          
-          <Button asChild size="sm"><Link to="/contato" search={{ plano: project.plan }}>Quero um projeto parecido<ArrowRight /></Link></Button>
-        </div>
       </header>
       <iframe src={project.url} title={project.name} className="w-full flex-1 border-0" />
     </div>
