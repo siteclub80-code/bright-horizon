@@ -1,10 +1,58 @@
 [
-  {"capability":"code","source":"SiteClub ZIP (TanStack Start)","outcome":"migrate","status":"in_progress","next_action":"copy src, assets, tests"},
-  {"capability":"schema","source":"company_requests table","outcome":"migrate","status":"in_progress","next_action":"apply migration"},
-  {"capability":"records","source":"old backend company_requests rows","outcome":"migrate","status":"pending","next_action":"user to provide CSV export or skip"},
-  {"capability":"auth identities","source":"none (no login in app)","outcome":"not_applicable","status":"verified","next_action":"none"},
-  {"capability":"authorization","source":"server-only insert, RLS without policies","outcome":"migrate","status":"in_progress","next_action":"recreate"},
-  {"capability":"uploaded file bytes","source":"private bucket company-requests","outcome":"migrate","status":"pending","next_action":"bucket created empty; old files need export"},
-  {"capability":"secrets","source":"none required","outcome":"not_applicable","status":"verified","next_action":"none"},
-  {"capability":"verification","source":"-","outcome":"verify","status":"pending","next_action":"build, routes, form submit"}
+ {
+  "capability": "code",
+  "source": "SiteClub ZIP (TanStack Start)",
+  "outcome": "migrate",
+  "status": "verified",
+  "next_action": "none"
+ },
+ {
+  "capability": "schema",
+  "source": "company_requests table",
+  "outcome": "migrate",
+  "status": "verified",
+  "next_action": "none"
+ },
+ {
+  "capability": "records",
+  "source": "old backend company_requests rows",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "user to provide CSV export or skip"
+ },
+ {
+  "capability": "auth identities",
+  "source": "none (no login in app)",
+  "outcome": "not_applicable",
+  "status": "verified",
+  "next_action": "none"
+ },
+ {
+  "capability": "authorization",
+  "source": "server-only insert, RLS without policies",
+  "outcome": "migrate",
+  "status": "verified",
+  "next_action": "none"
+ },
+ {
+  "capability": "uploaded file bytes",
+  "source": "private bucket company-requests",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "bucket created empty; old files need export"
+ },
+ {
+  "capability": "secrets",
+  "source": "none required",
+  "outcome": "not_applicable",
+  "status": "verified",
+  "next_action": "none"
+ },
+ {
+  "capability": "verification",
+  "source": "-",
+  "outcome": "verify",
+  "status": "verified",
+  "next_action": "none"
+ }
 ]
