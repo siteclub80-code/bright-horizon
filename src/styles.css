@@ -485,5 +485,5 @@ body {
 @media(max-width:1000px){.hero-headline-br-sm{display:inline;}}
 /* Keep the intro paragraph lines balanced on small screens */
 @media(max-width:700px){.hero-copy>p{max-width:340px;}}
-@media(max-width:470px){.hero-copy>p{font-size:11px;}}
+@media(max-width:700px){.hero-copy>p{font-size:11px;}}
 @media(max-width:1000px){.hero-image{object-position:right center;}.hero-copy>p{max-width:340px;}}
