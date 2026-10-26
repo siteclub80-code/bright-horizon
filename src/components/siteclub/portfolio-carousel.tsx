@@ -43,7 +43,7 @@ export function PortfolioCarousel() {
     const node = wrapper.current;
     if (!node) return;
     const observer = new IntersectionObserver(
-      ([entry]) => setOnScreen(entry.isIntersecting),
+      ([entry]) => setOnScreen(entry?.isIntersecting ?? false),
       { threshold: 0.25 },
     );
     observer.observe(node);
