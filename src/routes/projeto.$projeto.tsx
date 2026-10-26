@@ -1,9 +1,8 @@
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
-import { ArrowLeft, ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Brand } from '@/components/siteclub/shell';
 import { portfolioProjects } from '@/lib/portfolio';
-import { portfolioWhatsAppNumber, portfolioWhatsAppUrl } from '@/lib/siteclub';
 
 export const Route = createFileRoute('/projeto/$projeto')({
   loader: ({ params }) => {
@@ -38,7 +37,7 @@ function ProjectViewer() {
         </div>
         <span className="hidden text-sm text-muted-foreground md:inline">{project.name}</span>
         <div className="flex items-center gap-2">
-          <Button asChild variant="outline" size="sm"><a href={portfolioWhatsAppUrl} target="_blank" rel="noreferrer" aria-label={`Falar no WhatsApp ${portfolioWhatsAppNumber}`}><MessageCircle/>WhatsApp {portfolioWhatsAppNumber}</a></Button>
+          
           <Button asChild size="sm"><Link to="/contato" search={{ plano: project.plan }}>Quero um projeto parecido<ArrowRight /></Link></Button>
         </div>
       </header>

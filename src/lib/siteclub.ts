@@ -1,8 +1,5 @@
 import { z } from 'zod';
 export const supportUrl = 'https://wa.me/5511937588251';
-/** WhatsApp number shown by the portfolio's contact button. */
-export const portfolioWhatsAppNumber = '11 99999-9999';
-export const portfolioWhatsAppUrl = `https://wa.me/55${portfolioWhatsAppNumber.replace(/\D/g, '')}`;
 export const websiteDeliveryDays = 3;
 export const plans = [
  { id: 'landing', name: 'Landing Page', price: 39.99, label: 'Para transformar visitas em oportunidades.', description: 'Uma página que apresenta seu serviço e leva o visitante ao contato.', audience: 'Ideal para divulgar um serviço ou oferta.', features: ['Página única com seu serviço e contato', 'Visual com a identidade da sua marca', 'Botão de WhatsApp', 'Hospedagem e SSL incluídos', 'Ajustes mensais sem custo extra'] },
