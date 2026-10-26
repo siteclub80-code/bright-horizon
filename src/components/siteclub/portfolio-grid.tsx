@@ -7,7 +7,7 @@ import drmarcia from '@/assets/portfolio-drmarcia.jpg';
 import novalog from '@/assets/portfolio-novalog.jpg';
 import estetica from '@/assets/portfolio-lf-clinica-estetica.jpg';
 
-const covers: Record<string, string> = { corretora, drmarcia, novalog, 'lf-clinica-estetica': estetica };
+export const portfolioCovers: Record<string, string> = { corretora, drmarcia, novalog, 'lf-clinica-estetica': estetica };
 
 export function PortfolioGrid() {
   return (
@@ -20,7 +20,7 @@ export function PortfolioGrid() {
               <span className="ml-3 truncate text-xs text-muted-foreground">{project.anonymous ? 'cliente confidencial' : project.name.toLowerCase()}</span>
             </div>
             <div className="aspect-[16/7] overflow-hidden">
-              <img src={covers[project.slug]} alt={`Capa do projeto ${project.name}`} loading="lazy" width={1280} height={560} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
+              <img src={portfolioCovers[project.slug]} alt={`Capa do projeto ${project.name}`} loading="lazy" width={1280} height={560} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
             </div>
           </Link>
           <div className="flex flex-1 flex-col gap-3 p-6">
