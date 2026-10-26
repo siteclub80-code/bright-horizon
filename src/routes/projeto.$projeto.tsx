@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Brand } from '@/components/siteclub/shell';
 import { portfolioProjects } from '@/lib/portfolio';
+import { portfolioCovers } from '@/lib/portfolio-covers';
 import { portfolioWhatsAppNumber, portfolioWhatsAppUrl } from '@/lib/siteclub';
 
 export const Route = createFileRoute('/projeto/$projeto')({
@@ -26,7 +27,7 @@ export const Route = createFileRoute('/projeto/$projeto')({
   component: ProjectViewer,
 });
 
-/** Shows a portfolio project inside Siteclub so the visitor never sees the project's address. */
+/** Shows an anonymized preview of a portfolio project; the client's real site and data are never shown. */
 function ProjectViewer() {
   const { project } = Route.useLoaderData();
   return (
@@ -42,7 +43,7 @@ function ProjectViewer() {
           <Button asChild size="sm"><Link to="/contato" search={{ plano: project.plan }}>Quero um projeto parecido<ArrowRight /></Link></Button>
         </div>
       </header>
-      <iframe src={project.url} title={project.name} className="w-full flex-1 border-0" />
+      <div className="flex flex-1 items-center justify-center overflow-auto p-4 md:p-8"><figure className="w-full max-w-6xl"><img src={portfolioCovers[project.slug]} alt={`Prévia do projeto ${project.name}`} width={1920} height={840} className="w-full rounded-2xl border border-border" /><figcaption className="mt-3 text-center text-sm text-muted-foreground">Prévia do projeto. Os dados do cliente são confidenciais.</figcaption></figure></div>
     </div>
   );
 }
