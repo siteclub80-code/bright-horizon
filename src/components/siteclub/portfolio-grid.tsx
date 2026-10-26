@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { portfolioProjects } from '@/lib/portfolio';
 import corretora from '@/assets/portfolio-corretora.jpg';
@@ -29,7 +29,6 @@ export function PortfolioGrid() {
             <p className="text-sm text-muted-foreground">{project.description}</p>
             <div className="mt-auto flex flex-wrap gap-2">
               <Button asChild variant="outline"><Link to="/projeto/$projeto" params={{ projeto: project.slug }}>Visitar projeto<ArrowUpRight /></Link></Button>
-              <Button asChild variant="link"><Link to="/contato" search={{ plano: project.plan }}>Quero um projeto parecido<ArrowRight /></Link></Button>
             </div>
           </div>
         </article>

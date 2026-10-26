@@ -17,5 +17,5 @@ export const Route = createFileRoute('/portfolio')({
 });
 
 function Portfolio() {
-  return <SiteShell><Reveal><main className="site-width section-space"><div className="page-heading"><span className="eyebrow">PORTFÓLIO</span><h1>Projetos que já<br/>estão no ar.</h1><p>Sites e sistemas criados para empresas e profissionais.</p></div><PortfolioGrid/></main></Reveal></SiteShell>;
+  return <SiteShell showHelp={false}><Reveal><main className="site-width section-space"><div className="page-heading"><span className="eyebrow">PORTFÓLIO</span><h1>Projetos que já<br/>estão no ar.</h1><p>Sites e sistemas criados para empresas e profissionais.</p></div><PortfolioGrid/></main></Reveal></SiteShell>;
 }
