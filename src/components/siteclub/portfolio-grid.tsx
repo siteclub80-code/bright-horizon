@@ -2,7 +2,12 @@ import { Link } from '@tanstack/react-router';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { portfolioProjects } from '@/lib/portfolio';
-import { portfolioCovers as covers } from '@/lib/portfolio-covers';
+import corretora from '@/assets/portfolio-corretora.jpg';
+import drmarcia from '@/assets/portfolio-drmarcia.jpg';
+import novalog from '@/assets/portfolio-novalog.jpg';
+import estetica from '@/assets/portfolio-lf-clinica-estetica.jpg';
+
+const covers: Record<string, string> = { corretora, drmarcia, novalog, 'lf-clinica-estetica': estetica };
 
 export function PortfolioGrid() {
   return (
@@ -12,7 +17,7 @@ export function PortfolioGrid() {
           <Link to="/projeto/$projeto" params={{ projeto: project.slug }} aria-label={`Ver ${project.name}`} className="block border-b border-border bg-muted">
             <div className="flex items-center gap-1.5 px-4 py-3">
               <span className="h-2.5 w-2.5 rounded-full bg-border" /><span className="h-2.5 w-2.5 rounded-full bg-border" /><span className="h-2.5 w-2.5 rounded-full bg-border" />
-              <span className="ml-3 truncate text-xs text-muted-foreground">cliente confidencial</span>
+              <span className="ml-3 truncate text-xs text-muted-foreground">{project.anonymous ? 'cliente confidencial' : project.name.toLowerCase()}</span>
             </div>
             <div className="aspect-[16/7] overflow-hidden">
               <img src={covers[project.slug]} alt={`Capa do projeto ${project.name}`} loading="lazy" width={1280} height={560} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
