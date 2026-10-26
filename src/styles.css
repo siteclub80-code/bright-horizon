@@ -482,4 +482,4 @@ body {
 /* Hero headline: keep each sentence line balanced on small screens */
 @media(max-width:700px){.hero-headline{font-size:29px;}}
 .hero-headline-br-sm{display:none;}
-@media(max-width:700px){.hero-headline-br-sm{display:inline;}}
+@media(max-width:470px){.hero-headline-br-sm{display:inline;}}
