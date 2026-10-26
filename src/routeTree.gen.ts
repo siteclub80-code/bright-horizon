@@ -10,33 +10,79 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as PlanosRouteImport } from './routes/planos'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as ProjetoProjetoRouteImport } from './routes/projeto.$projeto'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlanosRoute = PlanosRouteImport.update({
+  id: '/planos',
+  path: '/planos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetoProjetoRoute = ProjetoProjetoRouteImport.update({
+  id: '/projeto/$projeto',
+  path: '/projeto/$projeto',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/planos': typeof PlanosRoute
+  '/portfolio': typeof PortfolioRoute
+  '/projeto/$projeto': typeof ProjetoProjetoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/planos': typeof PlanosRoute
+  '/portfolio': typeof PortfolioRoute
+  '/projeto/$projeto': typeof ProjetoProjetoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/planos': typeof PlanosRoute
+  '/portfolio': typeof PortfolioRoute
+  '/projeto/$projeto': typeof ProjetoProjetoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/contato' | '/planos' | '/portfolio' | '/projeto/$projeto'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/contato' | '/planos' | '/portfolio' | '/projeto/$projeto'
+  id:
+    | '__root__'
+    | '/'
+    | '/contato'
+    | '/planos'
+    | '/portfolio'
+    | '/projeto/$projeto'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatoRoute: typeof ContatoRoute
+  PlanosRoute: typeof PlanosRoute
+  PortfolioRoute: typeof PortfolioRoute
+  ProjetoProjetoRoute: typeof ProjetoProjetoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +94,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/planos': {
+      id: '/planos'
+      path: '/planos'
+      fullPath: '/planos'
+      preLoaderRoute: typeof PlanosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projeto/$projeto': {
+      id: '/projeto/$projeto'
+      path: '/projeto/$projeto'
+      fullPath: '/projeto/$projeto'
+      preLoaderRoute: typeof ProjetoProjetoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatoRoute: ContatoRoute,
+  PlanosRoute: PlanosRoute,
+  PortfolioRoute: PortfolioRoute,
+  ProjetoProjetoRoute: ProjetoProjetoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
